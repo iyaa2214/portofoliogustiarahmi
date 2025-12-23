@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustia Rahmi | DevOps & Cloud Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gcpBlue: '#4285F4',
+                        gcpRed: '#EA4335',
+                        gcpYellow: '#FBBC04',
+                        gcpGreen: '#34A853',
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #111827);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #f8fafc;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .photo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glowing-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 105%;
+            height: 105%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4285F4, #34A853, #FBBC04, #EA4335);
+            filter: blur(15px);
+            z-index: -1;
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(66, 133, 244, 0.5);
+            box-shadow: 0 0 20px rgba(66, 133, 244, 0.2);
+        }
+
+        .tech-tag:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .cert-card {
+            transition: all 0.3s ease;
+        }
+        .cert-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.02);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <span class="w-8 h-8 rounded bg-gradient-to-br from-gcpBlue via-gcpRed to-gcpYellow flex items-center justify-center text-xs text-white">GR</span>
+                Gustia Rahmi
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+                <a href="#about" class="hover:text-gcpBlue transition-colors">About</a>
+                <a href="#experience" class="hover:text-gcpRed transition-colors">Journey</a>
+                <a href="#projects" class="hover:text-gcpYellow transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-gcpGreen transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-white"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl text-center" data-aos="fade-up">
+            <h2 class="text-gcpBlue font-semibold tracking-[0.2em] mb-4 uppercase">DevOps & Cloud Engineer</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Building <span id="typing" class="text-transparent bg-clip-text bg-gradient-to-r from-gcpBlue via-gcpGreen to-gcpYellow"></span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                "Building Scalable, Efficient, and Reliable Digital Solutions"
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="px-8 py-3 bg-gcpBlue hover:bg-blue-600 text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/30">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+                <a href="#contact" class="px-8 py-3 glass border border-white/10 hover:border-white/30 rounded-full font-semibold transition-all">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold mb-6">About <span class="text-gcpBlue">Me</span></h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        I am an enthusiastic Information Systems fresh graduate from <span class="text-white">Politeknik Negeri Padang (GPA 3.86)</span> with a strong passion for Cloud Computing and DevOps.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        My expertise lies in managing cloud-based infrastructure (GCP), automating deployments via Docker & Git, and implementing comprehensive monitoring systems using Grafana, Prometheus, and Alertmanager.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 glass rounded-xl tech-tag transition-all flex flex-col items-center">
+                            <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L12 4.13793L19.4483 8.27586L24 5.7931L12 0Z" fill="#4285F4"/>
+                                <path d="M0 5.7931L4.55172 8.27586L12 4.13793L12 0L0 5.7931Z" fill="#EA4335"/>
+                                <path d="M12 12.4138L12 24L24 18.2069L24 5.7931L12 12.4138Z" fill="#FBBC04"/>
+                                <path d="M0 5.7931L0 18.2069L12 24L12 12.4138L0 5.7931Z" fill="#34A853"/>
+                            </svg>
+                            <h4 class="font-bold">GCP</h4>
+                            <p class="text-xs text-gray-500">Infrastructure</p>
+                        </div>
+                        <div class="p-4 glass rounded-xl tech-tag transition-all flex flex-col items-center">
+                            <i class="fab fa-docker text-blue-400 text-3xl mb-2"></i>
+                            <h4 class="font-bold">Docker</h4>
+                            <p class="text-xs text-gray-500">Containerization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="photo-container">
+                        <div class="glowing-ring"></div>
+                        <img src="fototia.JPG" 
+                             alt="Gustia Rahmi" 
+                             class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-black/20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -inset-4 bg-gradient-to-r from-gcpBlue to-gcpGreen rounded-2xl opacity-10 blur-2xl"></div>
+                <div class="glass p-8 rounded-2xl relative">
+                    <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i class="fas fa-tools text-gcpYellow"></i> Technical Stack & Tools
+                    </h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Grafana</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Prometheus</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Alertmanager</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Google Cloud Run</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Git / CI-CD</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">React.js</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">App Engine</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Cloud Firestore</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">JavaScript</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">C++</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm tech-tag transition-all cursor-default">Omada SDN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="experience" class="py-24 px-6 bg-white/[0.02]">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">My Academic & Professional <span class="text-gcpRed">Journey</span></h3>
+            
+            <div class="space-y-20">
+                <!-- EDUCATION SECTION -->
+                <div>
+                    <h4 class="text-gcpGreen uppercase tracking-[0.2em] text-sm font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h4>
+                    <div class="space-y-10">
+                        <div class="relative pl-8 border-l-2 border-gcpGreen/30" data-aos="fade-up">
+                            <div class="absolute w-5 h-5 bg-gcpGreen rounded-full -left-[11px] top-0 shadow-[0_0_15px_#34A853]"></div>
+                            <span class="text-xs text-gcpGreen font-bold uppercase tracking-widest">2022 - 2025</span>
+                            <h4 class="text-2xl font-bold mt-1">Politeknik Negeri Padang</h4>
+                            <p class="text-gray-300 font-medium">Bachelor of Applied Science in Information Systems</p>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="px-4 py-1 bg-gcpGreen/10 border border-gcpGreen/20 text-gcpGreen text-sm rounded-full font-bold">GPA: 3.86 / 4.00</span>
+                                <span class="text-gray-500 text-xs italic">Graduated with Honors</span>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-white/10" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute w-5 h-5 bg-white/20 rounded-full -left-[11px] top-0"></div>
+                            <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Feb 2024 - July 2024</span>
+                            <h4 class="text-xl font-bold mt-1">Universitas Padjadjaran (Unpad)</h4>
+                            <p class="text-gray-400 mt-1 italic">Student Exchange Program (PMM)</p>
+                            <p class="text-sm text-gray-500 mt-3 leading-relaxed">
+                                Participated in the Independent Student Exchange Program, focusing on Digital Marketing and interdisciplinary project collaboration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WORK EXPERIENCE SECTION -->
+                <div>
+                    <h4 class="text-gcpBlue uppercase tracking-[0.2em] text-sm font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-briefcase"></i> Professional Experience
+                    </h4>
+                    <div class="space-y-10">
+                        <div class="relative pl-8 border-l-2 border-gcpBlue/30" data-aos="fade-up">
+                            <div class="absolute w-5 h-5 bg-gcpBlue rounded-full -left-[11px] top-0 shadow-[0_0_15px_#4285F4]"></div>
+                            <span class="text-xs text-gcpBlue font-bold uppercase tracking-widest">Feb 2025 - Aug 2025</span>
+                            <h4 class="text-2xl font-bold mt-1 text-white">DevOps Intern</h4>
+                            <p class="text-gcpBlue font-medium">PT Gamatechno Indonesia (Yogyakarta)</p>
+                            <ul class="text-sm text-gray-400 mt-4 space-y-2 list-none">
+                                <li class="flex gap-2">
+                                    <span class="text-gcpBlue">▹</span> 
+                                    Implemented a robust monitoring system by integrating Grafana, Prometheus, and Alertmanager.
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-gcpBlue">▹</span> 
+                                    Automated incident alerts via Discord Webhooks for real-time infrastructure visibility.
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-gcpBlue">▹</span> 
+                                    Conducted application testing and performance validation to ensure system reliability.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-gcpYellow/30" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute w-5 h-5 bg-gcpYellow rounded-full -left-[11px] top-0 shadow-[0_0_15px_#FBBC04]"></div>
+                            <span class="text-xs text-gcpYellow font-bold uppercase tracking-widest">Sept 2024 - Dec 2024</span>
+                            <h4 class="text-2xl font-bold mt-1 text-white">Cloud Computing Cohort</h4>
+                            <p class="text-gcpYellow font-medium">Bangkit Academy led by Google, GoTo, & Traveloka</p>
+                            <p class="text-sm text-gray-400 mt-4 leading-relaxed">
+                                Selected as one of 4,636 students nationwide. 
+                                Mastered Google Cloud Platform (GCP) services including App Engine, Cloud Run, and Firestore through intensive industry-led curriculum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12" data-aos="fade-right">Featured <span class="text-gcpYellow">Projects</span></h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-gcpBlue/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-gcpBlue"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Real-time Monitoring</h4>
+                    <p class="text-sm text-gray-400 mb-6">Implemented Prometheus and Grafana dashboards to monitor server health at PT Gamatechno.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Grafana</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Prometheus</span>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-lg bg-gcpGreen/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud-upload-alt text-gcpGreen"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Cloud Run Deployment</h4>
+                    <p class="text-sm text-gray-400 mb-6">Deployed containerized web profile applications to Google Cloud Run for scalable hosting.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Docker</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Cloud Run</span>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-lg bg-gcpRed/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-gcpRed"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ML Backend Infra</h4>
+                    <p class="text-sm text-gray-400 mb-6">Designed backend infrastructure for Machine Learning apps using Google Cloud App Engine.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">App Engine</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Firestore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-24 px-6 bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Professional <span class="text-gcpGreen">Certifications</span></h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cloud & DevOps Group -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h5 class="text-sm font-bold text-gcpBlue uppercase tracking-widest ml-2 mb-4">Cloud & DevOps</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0L12 4.13793L19.4483 8.27586L24 5.7931L12 0Z" fill="#4285F4"/>
+                            <path d="M0 5.7931L4.55172 8.27586L12 4.13793L12 0L0 5.7931Z" fill="#EA4335"/>
+                            <path d="M12 12.4138L12 24L24 18.2069L24 5.7931L12 12.4138Z" fill="#FBBC04"/>
+                            <path d="M0 5.7931L0 18.2069L12 24L12 12.4138L0 5.7931Z" fill="#34A853"/>
+                        </svg>
+                        <div>
+                            <p class="text-sm font-bold">Google Cloud Engineer</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-infinity text-gcpGreen text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Implement DevOps Workflows</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-shield-alt text-gcpBlue text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Networking & Security in GCP</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Networking Group (TP-Link Omada) -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-sm font-bold text-gcpYellow uppercase tracking-widest ml-2 mb-4">Networking (TP-Link)</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4 border-l-4 border-gcpYellow">
+                        <i class="fas fa-wifi text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Omada Wireless Certification</p>
+                            <p class="text-[10px] text-gray-500 uppercase">TP-Link Certified</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4 border-l-4 border-gcpYellow">
+                        <i class="fas fa-network-wired text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Omada Routing & Switching</p>
+                            <p class="text-[10px] text-gray-500 uppercase">TP-Link Certified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Group (Dicoding) -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-sm font-bold text-gcpRed uppercase tracking-widest ml-2 mb-4">Development (Dicoding)</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-code text-gcpRed text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Dasar Pemrograman Web</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fab fa-js-square text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Dasar Pemrograman JavaScript</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-database text-gcpBlue text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Back-End Pemula (Google Cloud)</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h3 class="text-4xl font-bold mb-8" data-aos="fade-up">Let's <span class="text-gcpGreen">Collaborate</span></h3>
+            <p class="text-gray-400 mb-12">I'm ready to help your organization build reliable, scalable, and automated cloud infrastructure.</p>
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="mailto:gustiarahmy14@gmail.com" class="text-2xl hover:text-gcpRed transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/gustia-rahmi" target="_blank" class="text-2xl hover:text-gcpBlue transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/iyaa2214" target="_blank" class="text-2xl hover:text-gray-400 transition-colors"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-xs text-gray-500">© 2025 Gustia Rahmi. Built with Passion, Tailwind & Coffee.</p>
+        </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gcpGreen/10 blur-[100px] rounded-full"></div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic' });
+
+        new Typed('#typing', {
+            strings: ['Solutions.', 'DevOps Systems.', 'Cloud Infra.', 'Automation.'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3', 'shadow-2xl');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-3', 'shadow-2xl');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
