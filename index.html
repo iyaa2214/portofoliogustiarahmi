@@ -299,49 +299,134 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6">
+    <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold mb-12" data-aos="fade-right">Projects</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass p-6 rounded-2xl project-card" data-aos="fade-up">
-                    <i class="fas fa-chart-line text-gcpBlue text-2xl mb-4 block"></i>
-                    <h4 class="font-bold mb-2">Real-time Monitoring</h4>
-                    <p class="text-xs text-gray-400">Prometheus and Grafana dashboards for server health monitoring.</p>
+            <h3 class="text-3xl font-bold mb-12" data-aos="fade-right">Featured <span class="text-gcpYellow">Projects</span></h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-gcpBlue/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-gcpBlue"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Real-time Monitoring</h4>
+                    <p class="text-sm text-gray-400 mb-6">Implemented Prometheus and Grafana dashboards to monitor server health at PT Gamatechno.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Grafana</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Prometheus</span>
+                    </div>
                 </div>
-                <div class="glass p-6 rounded-2xl project-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-cloud-upload-alt text-gcpGreen text-2xl mb-4 block"></i>
-                    <h4 class="font-bold mb-2">Cloud Deployment</h4>
-                    <p class="text-xs text-gray-400">Containerized web applications hosted on Google Cloud Run.</p>
+
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-lg bg-gcpGreen/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud-upload-alt text-gcpGreen"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Cloud Run Deployment</h4>
+                    <p class="text-sm text-gray-400 mb-6">Deployed containerized web profile applications to Google Cloud Run for scalable hosting.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Docker</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Cloud Run</span>
+                    </div>
                 </div>
-                <div class="glass p-6 rounded-2xl project-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-server text-gcpRed text-2xl mb-4 block"></i>
-                    <h4 class="font-bold mb-2">ML Backend Infra</h4>
-                    <p class="text-xs text-gray-400">Backend infrastructure for ML apps using GCP App Engine.</p>
+
+                <div class="glass p-6 rounded-2xl project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-lg bg-gcpRed/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-gcpRed"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ML Backend Infra</h4>
+                    <p class="text-sm text-gray-400 mb-6">Designed backend infrastructure for Machine Learning apps using Google Cloud App Engine.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">App Engine</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">Firestore</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="py-20 px-6 bg-white/[0.01]">
+    <!-- Certifications Section -->
+    <section class="py-24 px-6 bg-white/[0.02]">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl font-bold mb-12 text-center">Certifications</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="glass p-4 rounded-xl flex items-center gap-4 cert-card">
-                    <i class="fas fa-infinity text-gcpGreen"></i>
-                    <p class="text-xs font-bold">DevOps Workflows (GCP)</p>
+            <h3 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Professional <span class="text-gcpGreen">Certifications</span></h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cloud & DevOps Group -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h5 class="text-sm font-bold text-gcpBlue uppercase tracking-widest ml-2 mb-4">Cloud & DevOps</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0L12 4.13793L19.4483 8.27586L24 5.7931L12 0Z" fill="#4285F4"/>
+                            <path d="M0 5.7931L4.55172 8.27586L12 4.13793L12 0L0 5.7931Z" fill="#EA4335"/>
+                            <path d="M12 12.4138L12 24L24 18.2069L24 5.7931L12 12.4138Z" fill="#FBBC04"/>
+                            <path d="M0 5.7931L0 18.2069L12 24L12 12.4138L0 5.7931Z" fill="#34A853"/>
+                        </svg>
+                        <div>
+                            <p class="text-sm font-bold">Google Cloud Engineer</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-infinity text-gcpGreen text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Implement DevOps Workflows</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-shield-alt text-gcpBlue text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Networking & Security in GCP</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Google Cloud</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass p-4 rounded-xl flex items-center gap-4 cert-card">
-                    <i class="fas fa-wifi text-gcpYellow"></i>
-                    <p class="text-xs font-bold">Omada Wireless Cert</p>
+
+                <!-- Networking Group (TP-Link Omada) -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-sm font-bold text-gcpYellow uppercase tracking-widest ml-2 mb-4">Networking (TP-Link)</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4 border-l-4 border-gcpYellow">
+                        <i class="fas fa-wifi text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Omada Wireless Certification</p>
+                            <p class="text-[10px] text-gray-500 uppercase">TP-Link Certified</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4 border-l-4 border-gcpYellow">
+                        <i class="fas fa-network-wired text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Omada Routing & Switching</p>
+                            <p class="text-[10px] text-gray-500 uppercase">TP-Link Certified</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass p-4 rounded-xl flex items-center gap-4 cert-card">
-                    <i class="fas fa-code text-gcpRed"></i>
-                    <p class="text-xs font-bold">Web Programming (Dicoding)</p>
+
+                <!-- Development Group (Dicoding) -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-sm font-bold text-gcpRed uppercase tracking-widest ml-2 mb-4">Development (Dicoding)</h5>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-code text-gcpRed text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Dasar Pemrograman Web</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fab fa-js-square text-gcpYellow text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Dasar Pemrograman JavaScript</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="glass p-5 rounded-xl cert-card flex items-center gap-4">
+                        <i class="fas fa-database text-gcpBlue text-2xl"></i>
+                        <div>
+                            <p class="text-sm font-bold">Back-End Pemula (Google Cloud)</p>
+                            <p class="text-[10px] text-gray-500 uppercase">Dicoding Indonesia</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Contact -->
     <footer id="contact" class="py-20 px-6 text-center">
@@ -399,4 +484,5 @@
     </script>
 </body>
 </html>
+
 
